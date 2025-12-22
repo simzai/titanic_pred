@@ -1,9 +1,9 @@
-Titanic Survival Prediction
+TITANIC SURVIVAL PREDICTION
 
-Overview
+OVERVIEW-----------------------------------------------------------------------------
 This project builds a machine learning model to predict Titanic passenger survival based on passenger information. The dataset is sourced from the Kaggle Titanic dataset.The model uses XGBoost, a gradient boosting algorithm, to achieve high accuracy by combining engineered features and proper preprocessing.
 
-Feature	Description
+FEATURE DESCRIPTION-------------------------------------------------------------------
 
 age:	Age of the passenger
 
@@ -25,7 +25,7 @@ family_size:	Total family members aboard (sibsp + parch + 1)
 
 deck_encoded:	Encoded deck letter (A–G)
 
-Target variable:
+TARGET VARIABLE:
 survived (0 = No, 1 = Yes)
 
 Handling missing values
@@ -34,7 +34,7 @@ age and embarked were filled using mean or most frequent strategy.
 
 deck was filled using passenger class mapping (C, E, G based on Pclass).
 
-Feature Engineering
+FEATURE ENGINEERING---------------------------------------------------------------------
 
 Combined sibsp + parch → family_size.
 
@@ -42,9 +42,9 @@ Encoding:Categorical variables like sex, embarked → one-hot encoding.
 
 Deck letters → label encoded.
 
-Scaling::Numerical features (age, fare) were scaled for better performance in certain algorithms.
+SCALING::Numerical features (age, fare) were scaled for better performance in certain algorithms.
 
-Model
+MODEL-----------------------------------------------------------------------------------
 Algorithm: XGBoost Classifier
 
 Hyperparameters after tuning:
@@ -59,7 +59,7 @@ subsample: 0.7
 
 colsample_bytree: 0.7
 
-Performance:
+PERFORMANCE------------------------------------------------------------------------------
 
 Cross-validation accuracy: 83.7%
 
